@@ -1,10 +1,40 @@
 import React from 'react';
 import { IoRocketOutline } from "react-icons/io5";
 import { FaArrowLeft } from "react-icons/fa6";
+import Chart from 'react-google-charts';
 
 const BandwithProgressBar = () => {
+
+    const data = [
+        [
+            { type: "date", label: "Day" },
+            "usage",
+            "speed",
+        ],
+        [new Date(2014, 0), -0.5, 5.7],
+        [new Date(2014, 1), 0.4, 8.7],
+        [new Date(2014, 2), 0.5, 12],
+
+    ];
+    const options = {
+        width: 350,
+        height: 100,
+        series: {
+            // Gives each series an axis name that matches the Y-axis below.
+            0: { axis: "Temps" },
+            1: { axis: "Daylight" },
+        },
+        axes: {
+            // Adds labels to each axis; they don't have to match the axis names.
+            y: {
+                Temps: { label: "Temps (Celsius)" },
+                Daylight: { label: "Daylight" },
+            },
+        },
+    };
+
     return (
-        <div className=' w-[50%] bg-[#FFFFFF]  rounded-md'>
+        <div className=' w-[50%] bg-[#FFFFFF]  rounded-md '>
             <div className='flex justify-between mb-2 p-4'>
                 <div className='flex justify-center items-center gap-2'>
                     <span className='flex justify-center items-end'>
@@ -56,6 +86,15 @@ const BandwithProgressBar = () => {
                     </span>
                     <p className='text-sm text-gray-400'>increased server resources</p>
                 </div>
+            </div>
+            <div className='px-2 py-4'>
+                <Chart
+                    chartType="Line"
+                    width="70%"
+                    height="50px"
+                    data={data}
+                    options={options}
+                />
             </div>
         </div>
     );
