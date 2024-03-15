@@ -7,21 +7,21 @@ import MainContent from "../DashboardComponent/MainContent/MainContent";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Main/>,
+        element: <Main />,
         children: [
             {
-                path:"/",
-                element:<Home/>                
+                path: "/",
+                element: <Home />
             }
         ]
     },
     {
-        path:"/dashboard",
-        element:<Dashboard/>,
-        children:[
+        path: "/dashboard",
+        element: <Dashboard />,
+        children: [
             {
-                path:"/dashboard",
-                element:<MainContent/>
+                path: "/dashboard",
+                element: <MainContent />
             }
         ]
     }
