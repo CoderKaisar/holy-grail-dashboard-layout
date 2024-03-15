@@ -1,0 +1,7 @@
+.buttonStyle {
+    @apply flex justify-start items-center gap-4 pl-6
+}
+
+.buttonHead {
+    @apply uppercase pl-2
+}
