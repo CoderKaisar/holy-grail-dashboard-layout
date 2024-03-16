@@ -7,7 +7,7 @@ import { FaCar } from "react-icons/fa";
 
 const Sidebar = () => {
     return (
-        <section className=' text-white  py-4 space-y-5 text-sm bg-gray-700'>
+        <section className=' text-white  py-4 space-y-5 text-sm '>
             <div>
                 <h2 className='buttonHead'>Pro Version</h2>
                 <Link className='buttonStyle'> <IoDiamondOutline /><span>Upgrade to Pro</span></Link>

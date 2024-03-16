@@ -12,10 +12,10 @@ const Dashboard = () => {
                 <Navbar />
             </div>
             <div className='flex'>
-                <div className='w-[20%] h-screen md:h-screen lg:h-screen  '>
+                <div className='w-[20%] bg-gray-700 '>
                     <Sidebar />
                 </div>
-                <div className='w-[80%] overflow-hidden bg-[#F2F3F5]'>
+                <div className='w-[80%] bg-[#F2F3F5]'>
                     <Outlet />
                 </div>
             </div>
